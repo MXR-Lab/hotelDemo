@@ -1,6 +1,7 @@
 from DeepImageSearch import Load_Data, Search_Setup
 import cv2
-query = 'query_image.jpg'
+print("Please input query image:")
+query = input()
 image_list = Load_Data().from_folder(['test_images'])
 st = Search_Setup(image_list, model_name="vgg19", pretrained=True, image_count=None)
 st.run_index()
